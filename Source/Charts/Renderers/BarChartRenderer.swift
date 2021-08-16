@@ -49,12 +49,21 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
         var rects = [CGRect]()
     }
     
+    let roundedBars: Bool
+    
     @objc open weak var dataProvider: BarChartDataProvider?
     
     @objc public init(dataProvider: BarChartDataProvider, animator: Animator, viewPortHandler: ViewPortHandler)
     {
+        self.roundedBars = false
         super.init(animator: animator, viewPortHandler: viewPortHandler)
-        
+        self.dataProvider = dataProvider
+    }
+    
+    @objc public init(dataProvider: BarChartDataProvider, animator: Animator, viewPortHandler: ViewPortHandler, roundedBars: Bool)
+    {
+        self.roundedBars = roundedBars
+        super.init(animator: animator, viewPortHandler: viewPortHandler)
         self.dataProvider = dataProvider
     }
     
@@ -431,7 +440,17 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                 context.setFillColor(dataSet.color(atIndex: j).cgColor)
             }
             
+            #if canImport(UIKit)
+            if self.roundedBars {
+                let bezierPath = UIBezierPath(roundedRect: barRect, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: barRect.width, height: barRect.width))
+                context.addPath(bezierPath.cgPath)
+                context.drawPath(using: .fill)
+            } else {
+                context.fill(barRect)
+            }
+            #else
             context.fill(barRect)
+            #endif
             
             if drawBorder
             {
