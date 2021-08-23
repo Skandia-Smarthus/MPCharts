@@ -442,7 +442,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
             
             #if canImport(UIKit)
             if self.roundedBars {
-                let bezierPath = UIBezierPath(roundedRect: barRect, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: barRect.width, height: barRect.width))
+                let bezierPath = UIBezierPath(roundedRect: barRect, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 1, height: 1))
                 context.addPath(bezierPath.cgPath)
                 context.drawPath(using: .fill)
             } else {
@@ -830,7 +830,7 @@ open class BarChartRenderer: BarLineScatterCandleBubbleRenderer
                 
                 setHighlightDrawPos(highlight: high, barRect: barRect)
                 if roundedBars {
-                    let bezierPath = UIBezierPath(roundedRect: barRect, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: barRect.width / 2, height: barRect.width / 2))
+                    let bezierPath = UIBezierPath(roundedRect: barRect, byRoundingCorners: [.topLeft, .topRight], cornerRadii: CGSize(width: 1, height: 1))
                     context.addPath(bezierPath.cgPath)
                     context.drawPath(using: .fill)
                 } else {
