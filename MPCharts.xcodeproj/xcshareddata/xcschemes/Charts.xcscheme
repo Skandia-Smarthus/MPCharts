@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F2749BD5443C1CB5FE2080C2"
-               BuildableName = "ChartsTests.xctest"
-               BlueprintName = "ChartsTests"
-               ReferencedContainer = "container:Charts.xcodeproj">
+               BlueprintIdentifier = "A58A4ED274A941CA248EA921"
+               BuildableName = "Charts.framework"
+               BlueprintName = "Charts"
+               ReferencedContainer = "container:MPCharts.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -26,8 +26,7 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
          <TestableReference
             skipped = "NO">
@@ -36,7 +35,7 @@
                BlueprintIdentifier = "F2749BD5443C1CB5FE2080C2"
                BuildableName = "ChartsTests.xctest"
                BlueprintName = "ChartsTests"
-               ReferencedContainer = "container:Charts.xcodeproj">
+               ReferencedContainer = "container:MPCharts.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -54,10 +53,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "F2749BD5443C1CB5FE2080C2"
-            BuildableName = "ChartsTests.xctest"
-            BlueprintName = "ChartsTests"
-            ReferencedContainer = "container:Charts.xcodeproj">
+            BlueprintIdentifier = "A58A4ED274A941CA248EA921"
+            BuildableName = "Charts.framework"
+            BlueprintName = "Charts"
+            ReferencedContainer = "container:MPCharts.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <EnvironmentVariables>
