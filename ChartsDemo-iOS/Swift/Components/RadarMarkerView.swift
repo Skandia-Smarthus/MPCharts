@@ -10,7 +10,7 @@
 //
 
 import Foundation
-import Charts
+import MPCharts
 #if canImport(UIKit)
     import UIKit
 #endif
